@@ -7,9 +7,11 @@
     "dev": "vite --host --port 1337",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "jsondb": "json-server -p 1338 -H 0.0.0.0 db.json"
   },
   "dependencies": {
+    "json-server": "^1.0.0-alpha.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.2"
