@@ -11,6 +11,7 @@
     "jsondb": "json-server -p 1338 -H 0.0.0.0 db.json"
   },
   "dependencies": {
+    "@tinyhttp/res": "^2.2.2",
     "json-server": "^1.0.0-alpha.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
