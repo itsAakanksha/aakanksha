@@ -13,7 +13,7 @@ const App = () => {
   const hostnames = import.meta.env.VITE_SECONDARY_PUBLIC_HOSTNAME
   
  useEffect(() => {
-    fetch(`${dataURL}/blogs`)
+    fetch(`${hostnames}/blogs`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
