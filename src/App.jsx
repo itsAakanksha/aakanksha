@@ -8,15 +8,14 @@ import Post from './Post';
 import NotFound from './NotFound';
 
 const App = () => {
-  const [clientData, setClientData] = React.useState('');
-  const port = import.meta.env.VITE_SECONDARY_PUBLIC_PORT
-  const playgroundHostname = new URL (`https://${import.meta.env.VITE_PUBLIC_HOSTNAME}`)
-  const dataURL = `https://${playgroundHostname.hostname.split('.')[0]}-${port}.codedamn.app`
+  const [clientData, setClientData] = React.useState([]);
+  const hostname = import.meta.env.VITE_SECONDARY_PUBLIC_HOSTNAME
   
   React.useEffect(() => {
-    fetch(`${dataURL}/blogs`)
+    fetch(`${hostname}/blogs`)
       .then(response => {
         if (!response.ok) {
+          console.log(response)
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         return response.json();
