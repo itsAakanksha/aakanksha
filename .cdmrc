@@ -1,5 +1,6 @@
 tabs: ["src/App.jsx", "src/main.jsx"]
 // terminals: ['static-server -p 1337 --no-cache']
-terminals: ["bun install && bun dev","bun run jsondb"]
-run-button: bun dev
+// terminals: ["bun install && bun dev","bun run jsondb"]
+terminals: ["yarn install && yarn dev", "npm run jsondb"]
+run-button: npm run dev
 
